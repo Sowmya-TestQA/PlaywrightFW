@@ -1,0 +1,18 @@
+CSS selector guidelines
+
+If Id is present
+tagname#id or #id
+
+If class is present
+tagname.classname or .classname
+
+Css based on any attributes
+[attribute='value']
+
+Traversing from parent->child
+parenttagname>>childtagname
+
+locator based on text
+way 1 : text=''
+
+way 2: ("tagname:has-text('text')")
