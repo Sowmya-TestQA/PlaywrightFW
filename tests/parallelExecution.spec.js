@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
+test.describe.configure({mode:'parallel'});
 test("more validations", async function validatemethod({ page }) {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     // await page.goto("https://www.google.com");
@@ -16,7 +17,7 @@ test("more validations", async function validatemethod({ page }) {
 
 });
 
-test("@smoke Screenshot comparison", async ({ page }) => {
+test("Screenshot comparison", async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     await expect(page.locator("#displayed-text")).toBeVisible();
     await page.locator("#displayed-text").screenshot({ path: 'partialScreenshot.png' }); //Only webelement level screenshot
@@ -25,7 +26,7 @@ test("@smoke Screenshot comparison", async ({ page }) => {
     await expect(page.locator("#displayed-text")).toBeHidden();
 });
 
-test("@smoke Visual comparison test", async ({ page }) => {
+test("Visual comparison test", async ({ page }) => {
     await page.goto("https://www.flightaware.com/");
     expect(await page.screenshot()).toMatchSnapshot('landing.png');
 });
