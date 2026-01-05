@@ -1,0 +1,6 @@
+For allure reporting:
+
+commands to import and get allure
+npx playwright test --grep @web --reporter=line,allure-playwright  //allure results folder will be generated
+allure generate ./allure-results --clean //allure reports folder will be geenrated
+allure open ./allure-report //opens report
