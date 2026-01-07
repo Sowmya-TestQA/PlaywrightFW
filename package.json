@@ -7,14 +7,15 @@
     "regression": "npx playwright test",
     "webTest": "npx playwright test --grep @Web",
     "apiTest": "npx playwright test --grep @API",
-    "safariTest" : "npx playwright test --config playwright.config1.js --project=safari"  
+    "safariTest": "npx playwright test --config playwright.config1.js --project=safari"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.54.2",
-    "@types/node": "^24.3.0"
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "exceljs": "^4.4.0"

@@ -1,8 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import { trace } from 'console';
 
-const config = ({
+export const config = ({
   testDir: './tests',
   timeout:15000, //global timeout 
   expect:{
@@ -26,5 +25,4 @@ const config = ({
 
  
 });
-module.exports = config;
 
