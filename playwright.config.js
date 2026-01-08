@@ -7,7 +7,7 @@ export const config = ({
   expect:{
     timeout:15000,//assertion timeout
   },
-  reporter: 'html',
+  reporter:[['html', {open: 'never'}]] ,
   use: {
     browserName:'chromium',
     headless:true,
