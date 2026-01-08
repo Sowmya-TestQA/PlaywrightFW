@@ -10,14 +10,14 @@ export const config = ({
   reporter: 'html',
   use: {
     browserName:'chromium',
-    headless:false,
+    headless:true,
     screenshot: 'on',
     trace:'retain-on-failure',
   },
   projects: [
     {
       name: 'chromium',
-      use: { browserName: 'chromium', headless:false },
+      use: { browserName: 'chromium', headless:true },
     },
 
 
