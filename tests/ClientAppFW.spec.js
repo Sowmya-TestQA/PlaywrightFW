@@ -5,7 +5,7 @@ const {customisedTest} = require('../Utils/test-data');
 
 for(const data of dataset)
   {
-test(`Client App login for ${data.productName}`, async ({ page }) =>
+test.only(`@smoke Client App login for ${data.productName}`, async ({ page }) =>
    {
 
   const countrytoselect = "India";
@@ -44,7 +44,7 @@ test(`Client App login for ${data.productName}`, async ({ page }) =>
 )}
 
 
-customisedTest.only('Client App login', async ({ page,testData }) =>
+customisedTest('@smoke Client App login', async ({ page,testData }) =>
    {
 
   const countrytoselect = "India";

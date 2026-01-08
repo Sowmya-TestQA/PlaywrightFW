@@ -15,7 +15,7 @@ class LoginPage {
         await this.usernameLoc.fill(username);
         await this.passwordLoc.fill(password);
         await this.signInBtn.click();
-        await this.page.waitForLoadState('networkidle');
+       // await this.page.waitForLoadState('networkidle');
         // this step waits till all the network calls are done (inspect-> network tab) dynamic wait
     }
 
