@@ -7,7 +7,7 @@ export const config = ({
   expect:{
     timeout:15000,//assertion timeout
   },
-  reporter:[['html', {open: 'never'}]] ,
+  reporter:[['html', {outputFolder: 'playwright-report', open: 'never'}]] ,
   use: {
     browserName:'chromium',
     headless:true,
