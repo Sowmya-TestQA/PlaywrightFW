@@ -5,9 +5,25 @@ npx playwright test --grep @web --reporter=line,allure-playwright  //allure resu
 allure generate ./allure-results --clean //allure reports folder will be geenrated
 allure open ./allure-report //opens report
 
+To run from Package.json:
+npm run Regression
+
 command to start jenkins:
 java -jar jenkins.war -httpPort=8080 --enable-future-java
 creds: sowmya sowmya
 
 command to run cucumber features:
 npx cucumber-js --exit
+npx cucumber-js --tags "@Regression" --exit     
+
+To run in parallel:
+
+npx cucumber-js features/Ecommerce.feature --parallel 2
+here 2 represents two sceanrios at a time.
+We cant run two files in parallel.
+
+To rerun failed test:
+npx cucumber-js features/Ecommerce.feature --retry 2
+
+To generate report:
+npx cucumber-js features/Ecommerce.feature --parallel 2 --format html:cucumber-report.html

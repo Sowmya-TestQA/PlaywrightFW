@@ -8,7 +8,7 @@ await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 await page.locator('#username').fill("learning01");
 await page.locator("[type='password']").fill("learning01")
 await page.locator("#signInBtn").click();
-await page.locator("[style*='block']")
+await page.locator("[style*='block']");
 });
 
 

@@ -8,8 +8,9 @@
     "regression": "npx playwright test",
     "webTest": "npx playwright test --grep @Web",
     "apiTest": "npx playwright test --grep @API",
-    "safariTest": "npx playwright test --config playwright.config1.js --project=safari"
-  },
+    "safariTest": "npx playwright test --config playwright.config1.js --project=safari",
+    "cucumberRegression": "npx cucumber-js --tags @Regression --format html:cucumber-report.html --exit"
+  },  
   "keywords": [],
   "author": "",
   "license": "ISC",
