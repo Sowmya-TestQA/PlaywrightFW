@@ -14,7 +14,7 @@ export class LoginPage {
 
     async goTo() {
         await this.page.goto("https://rahulshettyacademy.com/client");
-    }
+    }   
 
     async userLogin(username:string, password:string) {
         await this.usernameLoc.fill(username);
