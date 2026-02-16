@@ -18,7 +18,7 @@ await page.locator("[style*='block']")
 
 
 
-test('page fixture test', async({page})=>{
+test.only('page fixture test', async({page})=>{
 
 await page.goto("https://google.com");
 console.log(await page.title());

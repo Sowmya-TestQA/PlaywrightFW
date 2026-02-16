@@ -29,7 +29,7 @@ test('Placing order', async ({ page }) => {
 
   await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*",
     async route => {
-      //interespting the response. API response -> playwright fake response -> Send to browser -> Front render the data 
+      //intercepting the response. API response -> playwright fake response -> Send to browser -> Front render the data 
       const response = await page.request.fetch(route.request());
       let body = JSON.stringify(FakePayload);
       await route.fulfill({ response, body });
