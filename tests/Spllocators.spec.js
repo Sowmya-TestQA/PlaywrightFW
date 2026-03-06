@@ -9,5 +9,6 @@ test('PW special locators', async function speciallocators({page}) {
     await page.getByRole("button", {name: 'Submit'}).click();
     await page.getByText("Success! The Form has been submitted successfully!.").isVisible();
     await page.getByRole("link",{name : "Shop"}).click();
+    await page.pause();
     await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
 })

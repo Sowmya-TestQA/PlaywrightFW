@@ -40,7 +40,7 @@ await passWord.fill("learning");
 await selector.selectOption("consult");
 await page.locator(".radiotextsty").last().click();
 await page.locator("#okayBtn").click();
-await expect(page.locator(".radiotextsty").last()).toBeChecked(); //tobechecked - whic returns true or false if the checkbox is checked or not
+await expect(page.locator(".radiotextsty").last()).isChecked(); //tobechecked - whic returns true or false if the checkbox is checked or not
 await terms.click();
 await expect(terms).toBeChecked(); //tobechecked - assertion that mandates the checkbox should be checked
 await terms.uncheck();
