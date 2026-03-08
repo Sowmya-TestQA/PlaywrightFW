@@ -18,7 +18,7 @@ async function ExcelWrite(SearchText, ReplaceText, filePath, change) {
     await workbook.xlsx.writeFile(filePath); //TC1
 
     const cellforPrice = worksheet.getCell(output.row, output.column + change.colchange); // from the cell(column) it traverses to col+2
-    cellforPrice.value = 350; // updates cell value
+    cellforPrice.value = 350; // updates cell value 
     await workbook.xlsx.writeFile(filePath); //TC2
 }
 

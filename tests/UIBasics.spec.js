@@ -2,7 +2,6 @@ const {test,expect} = require('@playwright/test');
 
 test('Browser fixture test', async function first({browser}){
 
-const context = await browser.newContext();
 const page = await browser.newPage();
 await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 await page.locator('#username').fill("learning01");
