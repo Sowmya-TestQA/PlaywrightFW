@@ -17,6 +17,6 @@ AfterStep(async function ({ pickle, result }) {
 
 After(async function () {
     console.log("Bye bye!");
-    await browser.close();
+    await this.page.close();
 
 });
