@@ -22,7 +22,7 @@ test('Placing order', async ({ page }) => {
 
   const products = page.locator(".card-body");
 
-  page.addInitScript(value => { window.localStorage.setItem('token', value) }, response.token); // login into an account with session cookie via loginAPI call.
+  page.addInitScript(value => { window.localStorage.setItem('token', value)}, response.token); // login into an account with session cookie via loginAPI call.
   await page.goto("https://rahulshettyacademy.com/client/");
   await page.waitForLoadState('networkidle'); // this step waits till all the network calls are done (inspect-> network tab) dynamic wait
   await products.first().waitFor({ state: 'visible' });
