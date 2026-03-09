@@ -31,3 +31,5 @@ test.only('Frames', async function framesTest({page}){
     console.log(await framepage.locator("span.text-4xl").textContent());
     });
 
+  
+
