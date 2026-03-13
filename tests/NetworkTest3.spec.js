@@ -5,7 +5,7 @@ test.only('Browser fixture test', async function first({browser}){
 const context = await browser.newContext();
 const page = await browser.newPage();
 // to abort or stop loading files while the network calls are made to reduce load time of the web
-page.route("**/*.css", route => route.abort());
+
 await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 await page.locator('#username').fill("learning01");
 await page.locator("[type='password']").fill("learning01")

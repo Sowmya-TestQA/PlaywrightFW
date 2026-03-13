@@ -29,6 +29,10 @@ test.only('Frames', async function framesTest({page}){
     const framepage= page.frameLocator("#courses-iframe");
     await framepage.locator("div a[href*='all-access-subscription']:visible").first().click();
     console.log(await framepage.locator("span.text-4xl").textContent());
+     page.on("dialog", dialog=> dialog.accept());
+    page.on('request', request => {
+  console.log(request.url());
+});
     });
 
   
